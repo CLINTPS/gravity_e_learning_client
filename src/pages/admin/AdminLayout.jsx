@@ -16,11 +16,11 @@ export default function AdminLayout() {
   }
 
   return (
-    <div className="flex min-h-screen bg-gray-100">
-      <Sidebar role="admin" />
-      <main className="flex-1 ml-64 p-8">
+    <div className="flex min-h-screen bg-gray-50 pt-14">
+      <Sidebar role={userInfo?.user?.role || "admin"} />
+      <div className="flex-1 ml-64 p-8">
         <Outlet />
-      </main>
+      </div>
     </div>
   );
 }
