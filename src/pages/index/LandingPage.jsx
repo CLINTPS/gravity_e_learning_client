@@ -36,7 +36,6 @@ export default function LandingPage() {
                             Join India's leading platform dedicated to realizing professional dreams and fostering growth for businesses and educational institutions.
                         </p>
 
-                        {/* Buttons */}
                         <div className="flex space-x-4">
                             <Link
                                 to="/contact"
