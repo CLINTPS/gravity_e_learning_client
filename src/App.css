@@ -1,34 +1,34 @@
-/* --- Place this entire block in your GLOBAL CSS file (e.g., index.css) --- */
-
-/* * 1. Defines the total width of the scrolling strip.
- * This width must be large enough to hold all 15 logos side-by-side without wrapping.
- * (Approx. 15 logos * 150px each = 2250px)
- */
-.scrolling-logos-track {
-    width: 250px; 
-    
-    /* Defines the distance to translate (move left) for a seamless loop. 
-       We move exactly the width of the first set of 5 logos (1/3 of the total 2250px width).
-    */
-    --translate-distance: calc(-1 * 2250px / 3);
+@keyframes scroll-ltr {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
-
-/* * 2. Defines the horizontal scroll animation
- */
 @keyframes scroll-rtl {
-    from {
-        transform: translateX(0);
+  from {
+      transform: translateX(0);
     }
     to {
-        /* Applies the calculated move distance */
-        transform: translateX(var(--translate-distance)); 
-    }
+      transform: translateX(-50%);
+  }
 }
 
-/* * 3. Applies the animation properties 
- */
+@keyframes fill-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animate-scroll-ltr {
+  animation: scroll-ltr 5s linear infinite;
+}
+
 .animate-scroll-rtl {
-    /* 40 seconds duration, linear speed, repeats infinitely */
-    animation: scroll-rtl 10s linear infinite; 
+  animation: scroll-rtl 5s linear infinite;
 }
