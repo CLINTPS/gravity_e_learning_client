@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import "./App.css";
 import Navbar from "./components/Navbar";
 import LearnNavbar from "./components/LearnNavbar";
 import Footer from "./components/Footer";
@@ -24,10 +25,8 @@ import LearnLanding from "./pages/index/LearnLanding";
 
 function LayoutWrapper() {
   const location = useLocation();
-
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
-
   const isAdminRoute = location.pathname.startsWith("/admin");
   const isLearnLandingRoute = location.pathname === "/larnLanding";
 
@@ -66,7 +65,6 @@ function LayoutWrapper() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/larnLanding" element={<LearnLanding />} />
-
           <Route
             path="/dashboard"
             element={
@@ -75,7 +73,6 @@ function LayoutWrapper() {
               </ProtectedRoute>
             }
           />
-
           <Route
             path="/admin/*"
             element={
@@ -94,12 +91,10 @@ function LayoutWrapper() {
         </Routes>
       </main>
       <Footer />
-
       <LoginModal
         isOpen={isLoginModalOpen}
         onClose={() => setIsLoginModalOpen(false)}
       />
-
       <SignupModal
         isOpen={isSignupModalOpen}
         onClose={() => setIsSignupModalOpen(false)}
