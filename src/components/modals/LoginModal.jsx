@@ -44,7 +44,7 @@ const LoginModal = ({ isOpen, onClose }) => {
             <p className="text-gray-600 mt-1">
               or{" "}
               <Link
-                to="/register"
+                to="/larnLanding"
                 className="text-indigo-600 hover:text-indigo-700"
               >
                 Create an account

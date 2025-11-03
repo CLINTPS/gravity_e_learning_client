@@ -46,7 +46,7 @@ const SignupModal = ({ isOpen, onClose }) => {
             <p className="text-gray-600 mt-1">
               or{" "}
               <Link
-                to="/login"
+                to="/larnLanding"
                 className="text-indigo-600 hover:text-indigo-700"
               >
                 Login

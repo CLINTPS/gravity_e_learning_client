@@ -356,14 +356,14 @@ export default function Navbar() {
             {userInfo ? (
               <button
                 onClick={handleLogout}
-                className="bg-[#123168] text-white px-6 py-3 rounded-md font-semibold text-base h-12 flex items-center hover:bg-indigo-800 transition duration-150 whitespace-nowrap"
+                className="bg-[#123168] text-white px-6 py-3 rounded-md font-semibold text-base h-10 flex items-center hover:bg-indigo-800 transition duration-150 whitespace-nowrap"
               >
                 Logout
               </button>
             ) : (
               <Link
                 to="/larnLanding"
-                className="bg-[#123168] text-white px-6 py-3 rounded-md font-semibold text-base h-12 flex items-center hover:bg-indigo-800 transition duration-150 whitespace-nowrap"
+                className="bg-[#123168] text-white px-4 py-3 rounded-md font-semibold text-base h-10 flex items-center hover:bg-indigo-800 transition duration-150 whitespace-nowrap"
               >
                 Learn with us
               </Link>
